@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecanico Rayo Makween</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body bgcolor="#005C5Dd">
+    
+    <header>
+        <div class = "cabecera">
+            <img src="img/mqdefault.jpg"  width="87px"  style="float: left;">
+            <h1 >Taller Mecanico Rayo Makween</h1>
+            <h1 class="icon-flash"></h1>
+            <!-- controlador menu -->
+            <input type="checkbox" name="" id="menu-bar">
+            <label class="icon-list" for="menu-bar"></label>
+            <!--menu-->
+            <nav class="menu">
+                <a class="icon-home" href="index.html">Inicio</a>
+                <a class="icon-picture" href="galeria.html">Galeria</a>
+                <a class="icon-wrench" href="formulario.html">Formulario</a>
+                <a class="icon-users" href="">Quienes Somos</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="banner">
+             <img src="img/mecanico_1.jfif" alt="">
+             <div class="contenedor">
+                <h2>Los Mecanicos</h2>
+             </div>
+        </section>
+        <section id="formulario">
+            <!-- codigo de inicio de formulario -->
+            <form class="form-registro" action="" method="post" onsubmit="return validacionForm()">
+
+                <h2 class="form-titulo">Creacion de Cuenta Usuario</h2>
+
+                <div class="contenedor-input">
+                    <input class="col-sm" type="text" name="txtNombreCompleto" id="txtNombreCompleto" placeholder="ingrese nombre y apellido" required minlength="5" pattern="[A-Za-z ]{5,15}" title="nombres de entre 5 a 15 caracteres">
+                    <input class="col-sm" type="email" name="txtEmail" id="" placeholder="ingrese email" required minlength="8">
+                    <input class="col-sm" type="text" name="txtUsuario" id="" placeholder="ingrese usuario" required minlength="8">
+                    <input class="col-sm" type="password" name="txtPass" id="" placeholder="ingrese password" required minlength="8" maxlength="15">
+
+                    <input class="btn-registro" type="submit" value="Registrar">
+                    <input class="btn-registro" type="button" value="Validar Registro"
+                     onclick="validacionForm()">
+                     <input type="button" value="Grabar" onclick="grabar()">
+                     <input type="button" value="Listar" onclick="listar()">
+                </div>
+            </form>
+
+        </section>
+        <script src="js/usuario.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            var arreglo = new Array();
+            var index = 0;
+
+            function grabar() { 
+                var nombre = document.getElementById('txtNombreCompleto').value;
+                usu = new usuario();
+                usu.setNombre(nombre);
+                alert('datos:' + usu.imprimir());
+                arreglo[index] = JSON.stringify(usu);
+                localStorage.setItem('registro',arreglo);
+                alert('grabo');
+                index++;
+            }
+            function listar() {
+                var tabla="<table border=1>";
+                tabla=tabla+"<tr>  <td>Nombre</td> </tr>";
+                var arreglo_temp = new Array();
+                var datos = localStorage.getItem('registro');
+                datos=datos.split("},{").join("};{"); 
+                arreglo_temp = datos.split(";");
+                for (let index = 0; index < arreglo_temp.length; index++) {
+                    var element = arreglo_temp[index];
+                    var usu = JSON.parse(element);
+                    tabla=tabla+"<tr>  <td>"+usu.nombre+"</td> </tr>";
+                }
+                tabla=tabla+"</table>";
+                document.getElementById('listado').innerHTML = tabla;
+            }
+        </script>
+        <div id="listado">
+
+        </div>
+        <script>
+            $(document).ready(function() {
+                alert('Jquery esta listo');
+            });
+        </script>
+        </section>
+    </main>
+</body>
+    
+
+</html>
