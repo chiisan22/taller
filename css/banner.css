@@ -5,10 +5,21 @@
     width: 100%;
 }
 #banner .contenedor {
-    font-size: 29px;
+    font-size: 30px; 
     position: absolute;
-    top: 80%;
-    left: 40%;
-    color: rgb(60, 102, 102);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 30%;
+    left: 50%;
+    color:#E1DE14;
+    font-family: 'Arial'; 
+    text-shadow: 9px 9px 9px #FF0000;
+}
+
+#banner .contenedor2 {
+    font-size: 30px; 
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    color:#f0f0ebfa;
+    font-family: 'Arial'; 
+    text-shadow: 9px 9px 9px #3d1111;
 }

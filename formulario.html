@@ -7,11 +7,11 @@
     <title>Taller Mecanico Rayo Makween</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body bgcolor="#005C5Dd">
+<body bgcolor="#843326">
     
     <header>
         <div class = "cabecera">
-            <img src="img/mqdefault.jpg"  width="87px"  style="float: left;">
+            <img src="img/mqdefault.jpg"  width="6%"  style="float: left;">
             <h1 >Taller Mecanico Rayo Makween</h1>
             <h1 class="icon-flash"></h1>
             <!-- controlador menu -->
@@ -19,37 +19,37 @@
             <label class="icon-list" for="menu-bar"></label>
             <!--menu-->
             <nav class="menu">
+                <a class="icon-users" href="registro.html">Registrarse</a>
                 <a class="icon-home" href="index.html">Inicio</a>
                 <a class="icon-picture" href="galeria.html">Galeria</a>
                 <a class="icon-wrench" href="formulario.html">Formulario</a>
-                <a class="icon-users" href="">Quienes Somos</a>
+                <a class="icon-users" href="somos.html">Quienes Somos</a>
+                <input type="text" class="buscar" placeholder="Que Buscas?"><a class="icon-search" href=""></a>
             </nav>
         </div>
     </header>
     <main>
         <section id="banner">
-             <img src="img/mecanico_1.jfif" alt="">
+             <img src="img/mecanio_1.jpg" alt="">
              <div class="contenedor">
-                <h2>Los Mecanicos</h2>
              </div>
         </section>
         <section id="formulario">
             <!-- codigo de inicio de formulario -->
             <form class="form-registro" action="" method="post" onsubmit="return validacionForm()">
 
-                <h2 class="form-titulo">Creacion de Cuenta Usuario</h2>
+                <h2 class="form-titulo">Solicitud de Revición</h2>
 
                 <div class="contenedor-input">
                     <input class="col-sm" type="text" name="txtNombreCompleto" id="txtNombreCompleto" placeholder="ingrese nombre y apellido" required minlength="5" pattern="[A-Za-z ]{5,15}" title="nombres de entre 5 a 15 caracteres">
                     <input class="col-sm" type="email" name="txtEmail" id="" placeholder="ingrese email" required minlength="8">
-                    <input class="col-sm" type="text" name="txtUsuario" id="" placeholder="ingrese usuario" required minlength="8">
-                    <input class="col-sm" type="password" name="txtPass" id="" placeholder="ingrese password" required minlength="8" maxlength="15">
+                    <input class="col-sm" type="text" name="txtComuna" id="" placeholder="Ingrese Comuna" required minlength="8">
+                    <input class="col-sm" type="email" name="txtDireccion" id="" placeholder="Direccion" required minlength="0"> 
+                    <input class="col-sm" type="email" name="txtFono id=" placeholder="Celular" required minlength="8"> 
 
                     <input class="btn-registro" type="submit" value="Registrar">
                     <input class="btn-registro" type="button" value="Validar Registro"
                      onclick="validacionForm()">
-                     <input type="button" value="Grabar" onclick="grabar()">
-                     <input type="button" value="Listar" onclick="listar()">
                 </div>
             </form>
 
@@ -96,6 +96,13 @@
         </script>
         </section>
     </main>
+    <div>
+        <nav class="menu">
+            <a class="icon-picture" href="contacto.html">Contactenos</a>
+            <a class="icon-wrench" href="pronto.html">Sucursales</a>
+            <a class="icon-users" href="somos.html">Quienes Somos</a>
+        </nav>
+    </div>
 </body>
     
 

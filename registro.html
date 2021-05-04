@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecanico Rayo Makween</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+        body {
+          background-image: url('img/seguridad.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+  </style>
+
+</head>
+<body bgcolor="#843326">
+    
+    <header>
+        <div class = "cabecera">
+            <img src="img/mqdefault.jpg"  width="6%"  style="float: left;">
+            <h1 >Taller Mecanico Rayo Makween</h1>
+            <h1 class="icon-flash"></h1>
+            <!-- controlador menu -->
+            <input type="checkbox" name="" id="menu-bar">
+            <label class="icon-list" for="menu-bar"></label>
+            <!--menu-->
+            <nav class="menu">
+                <a class="icon-home" href="index.html">Inicio</a>
+                <a class="icon-picture" href="galeria.html">Galeria</a>
+                <a class="icon-wrench" href="formulario.html">Formulario</a>
+                <a class="icon-users" href="somos.html">Quienes Somos</a> 
+            </nav>
+        </div>
+    </header>
+    <main>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <section id="formulario">
+            <!-- codigo de inicio de formulario -->
+            <form class="form-registro" action="" method="post" onsubmit="return validacionForm()">
+
+                <h2 class="form-titulo">Login</h2>
+
+                <div class="contenedor-input">
+                    <input class="col-sm" type="text" name="txtUsuario" id="" placeholder="ingrese usuario" required minlength="8">
+                    <input class="col-sm" type="password" name="txtPass" id="" placeholder="ingrese password" required minlength="8" maxlength="15">
+
+                    <a href="registro2.html"><input class="btn-registro" type="button" value="Crear Perfil"></a>
+                    <input class="btn-registro" type="submit" value="Loguear"
+                     onclick="validacionForm()">
+                </div>
+            </form>
+
+        </section>
+        </main>
+    </body>
+    </html>
